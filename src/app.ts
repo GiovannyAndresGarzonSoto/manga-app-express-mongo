@@ -11,7 +11,7 @@ env.config()
 
 app.use(cors())
 app.use(morgan('dev'))
-app.set('port', process.env.PORT)
+app.set('port', process.env.PORT || 3666)
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 app.use(upload.any())
